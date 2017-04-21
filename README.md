@@ -1,6 +1,3 @@
-**MORE COMMING SOON.............**
-
-
 # :clock10: Ternary clock with colorful read-out (web-version)
 
 ## What
@@ -23,11 +20,11 @@ The logic has been written in javascript, and all of it has been integrated in a
 
 ### Maths
 
-
+...comming soon.............
 
 ### Sourcecode
 
-
+...comming soon.............
 
 ## Contributors
 
