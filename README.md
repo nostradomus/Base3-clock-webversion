@@ -1,7 +1,7 @@
 **SOON MORE.............**
 
 
-# Base-3 clock with coloured read-out (web-version)
+# Base-3 clock with colorful read-out (web-version)
 
 ## What
 
