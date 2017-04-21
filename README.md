@@ -6,6 +6,8 @@ At school, kids learn to count from 1 to 10 (probably because the number of fing
 
 In a [ternary or base-3 systems](https://en.wikipedia.org/wiki/Ternary_numeral_system), only 0,1 and 2 are used. Being way less common, reading figures like 12201211 might make your brain-processor to get hot. The clock in this repository shows time by colored squares which represent the tri possible states in a ternary numeral system. 
 
+![Clock example](images/213250.png) ![Clock example](images/212443.png)
+
 ## Why
 
 Some might find the idea a little crazy, others will say its fun. I think it is an excellent tool to train the brain... and I am probably a little crazy :laughing:
