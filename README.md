@@ -28,7 +28,27 @@ The logic has been written in javascript, and all of it has been integrated in a
 
 ### Sourcecode
 
-...comming soon.............
+```javascript
+      function convertToTernaryColors(decimal) { 
+        var ternaryColors = ["whitesmoke", "whitesmoke", "whitesmoke", "whitesmoke"];
+        var div;
+        var rem;
+        for (i = 0; i < 4; i++) {
+            div = Math.floor(decimal/Math.pow(3, 3-i));
+            rem = decimal % Math.pow(3, 3-i);
+            switch(div) {
+                case 1:
+                    ternaryColors[i] = "yellowgreen";
+                    break;
+                case 2:
+                    ternaryColors[i] = "orangered";
+                    break;
+              } 
+            decimal = rem;  
+          }
+        return ternaryColors
+      }
+```
 
 ## Contributors
 
