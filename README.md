@@ -47,11 +47,11 @@ The left-most square is the most significant trit.
 
 The same way binary or decimal numeral systems are based on powers of their respective radices 2 and 10, the **ternary** system is based on powers of `3`. 
 
-trit    | least significant |       |        |         | ..... | most significant
---------|-------------------|-------|--------|---------|-------|-----------------
-power   | 0                 | 1     | 2      | 3       | ..... | 
-decimal | 1                 | 3     | 9      | 27      | ..... | 
-range   | 0/1/2             | 0/3/6 | 0/9/18 | 0/27/54 | ..... | 
+trit    | least significant |       |        |         |          | ... | most significant
+--------|-------------------|-------|--------|---------|----------|-----|-----------------
+power   | 0                 | 1     | 2      | 3       | 4        | ... | 
+decimal | 1                 | 3     | 9      | 27      | 81       | ... | 
+range   | 0/1/2             | 0/3/6 | 0/9/18 | 0/27/54 | 0/81/162 | ... | 
 
 So to convert a ternary number to the decimal system, you have to start with the most-right digit, multiply it with 3^0, multiply the next digit with 3^1, 3^2, and so on...
 
