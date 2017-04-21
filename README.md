@@ -25,9 +25,9 @@ The logic has been written in javascript, and all of it has been integrated in a
 ### How to read the clock
 
 Each square represents one base-3 digit, with a different color for each possible value :
- - 0 : gray
- - 1 : green
- - 2 : red
+ - 0 : `gray`
+ - 1 : `green`
+ - 2 : `red`
 
 Each line represents a part of the time : 
 
@@ -45,8 +45,22 @@ The left-most square is the most significant trit.
 
 ### Maths
 
-...comming soon.............
+The same way binary or decimal numeral systems are based on powers of their respective radices 2 and 10, the **ternary** system is based on powers of `3`. 
 
+trit    | least significant |       |        |         | ..... most significant
+--------|-------------------|-------|--------|---------|----------------------
+power   | 0                 | 1     | 2      | 3       | ..... 
+decimal | 1                 | 3     | 9      | 27      | .....  
+range   | 0/1/2             | 0/3/6 | 0/9/18 | 0/27/54 | ..... 
+
+So to convert a ternary number to the decimal system, you have to start with the most-right digit, multiply it with 3^0, multiply the next digit with 3^1, 3^2, and so on...
+
+So for example (11021)ter = 1x3^0 + 2x3^1 + 0x3^2 + 1x3^3 + 1x3^4 =  (111)dec
+
+The ternary numbers for the clock will have maximum 4 digits (max 3 for the hours).
+ - `hours` : (000)ter - (222)ter => (0)dec - (26)dec
+ - `mins/secs` : (0000)ter - (2222)ter => (0)dec - (80)dec
+ 
 ### Sourcecode
 
 ```javascript
