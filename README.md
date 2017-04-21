@@ -1,4 +1,4 @@
-**SOON MORE.............**
+**COMMING SOON.............**
 
 
 # Base-3 clock with colorful read-out (web-version)
