@@ -4,7 +4,7 @@
 
 At school, kids learn to count from 1 to 10 (probably because the number of fingers on your hands ;-). As such, in daily life, the decimal system is the most popular, and most intuitive to use. Computer scientists tend to prefer [binary](https://en.wikipedia.org/wiki/Binary_number) (0-1) or [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) (x0-xF) systems. All of them are just a way of counting quantity. 
 
-In a [ternary or base-3 systems](https://en.wikipedia.org/wiki/Ternary_numeral_system), only 0,1 and 2 are used. Being way less common, reading figures like 12201211 might make your brain-processor to get hot. The clock in this repository shows time by colored squares which represent the tri possible states in a ternary numeral system. 
+In a [ternary or base-3 systems](https://en.wikipedia.org/wiki/Ternary_numeral_system), only 0,1 and 2 are used. Being way less common, reading figures like 12201211 might make your brain-processor to get hot. The clock in this repository shows time by colored squares which represent the three possible states in a ternary numeral system. 
 
 `21:32:50`|`21:24:43`
 ----------|----------
@@ -21,6 +21,27 @@ Anyhow, it was a good exercise to write some javascript, it's a challenge every 
 The logic has been written in javascript, and all of it has been integrated in a minimalistic webpage in order to have a universal interface. In its current configuration the result even renders nicely on a smartphone (oriented in landscape).
 
 ## Technical details
+
+### How to read the clock
+
+Each square represents one base-3 digit, with a different color for each possible value :
+ - 0 : gray
+ - 1 : green
+ - 2 : red
+
+Each line represents a part of the time : 
+
+line | description | values
+-----|-------------|-------
+1 | hours | 00-23
+2 | minutes | 00-59
+3 | seconds | 00-59
+
+The numbers should be read from right to left.
+
+The right square is the least sigificant trit (yes trit, not bit).
+
+The left-most square is the most significant trit.
 
 ### Maths
 
@@ -59,5 +80,8 @@ And if you are having lots of time, I'll be happy to share the work with you ;-)
 ## :globe_with_meridians: License
 
 There is no specific license attached to this script. 
+
 If you like it, have fun with it (at your own risk of course :-D).
+
 Oh, and when using anything from this repository, it is highly appreciated if you mention its origin.
+
