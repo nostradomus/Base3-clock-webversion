@@ -1,27 +1,31 @@
-**COMMING SOON.............**
+**MORE COMMING SOON.............**
 
 
-# Base-3 clock with colorful read-out (web-version)
+# :clock10: Ternary clock with colorful read-out (web-version)
 
 ## What
 
+At school, kids learn to count from 1 to 10 (probably because the number of fingers on your hands ;-). As such, in daily life, the decimal system is the most popular, and most intuitive to use. Computer scientists tend to prefer [binary](https://en.wikipedia.org/wiki/Binary_number) (0-1) or [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) (x0-xF) systems. All of them are just a way of counting quantity. 
 
+In a [ternary or base-3 systems](https://en.wikipedia.org/wiki/Ternary_numeral_system), only 0,1 and 2 are used. Being way less common, reading figures like 12201211 might make your brain-processor to get hot. The clock in this repository shows time by colored squares which represent the tri possible states in a ternary numeral system. 
 
 ## Why
 
+Some might find the idea a little crazy, others will say its fun. I think it is an excellent tool to train the brain... and I am probably a little crazy :laughing:
 
+Anyhow, it was a good exercise to write some javascript, it's a challenge every time you want to know the time, and it was great fun after all. 
 
 ## How
 
-
+The logic has been written in javascript, and all of it has been integrated in a minimalistic webpage in order to have a universal interface. In its current configuration the result even renders nicely on a smartphone (oriented in landscape).
 
 ## Technical details
 
-### Code
+### Maths
 
 
 
-### How things work
+### Sourcecode
 
 
 
