@@ -61,7 +61,7 @@ The ternary numbers for the clock will have maximum 4 digits (max 3 for the hour
  - `hours` : (000)ter - (222)ter => (0)dec - (26)dec
  - `mins/secs` : (0000)ter - (2222)ter => (0)dec - (80)dec
  
-### Sourcecode
+### Javascript sourcecode
 
 The first function converts a decimal value into an array of color-names. Each element represents one trit. The array is limited to 4 elements, as the highest value for this application is 59 (minutes or seconds). Element 0 of the array contains the most significant trit, element 3 the least significant. The trit value is obtained by dividing the decimal value by powers of 3, and translating the remainder to the respective html-color for the trit value : 
  - 0 : `whitesmoke`
@@ -88,6 +88,114 @@ The first function converts a decimal value into an array of color-names. Each e
       }
     return ternaryColors
   }
+```
+The second function takes care of the cyclic (every second) update of the time in the browser window. First of all a reference to the cells in the table is created. Variable x points to a 12-element array (3 x 4 digits, to compose hours, minutes and seconds). Next, the script gets the current timestamp from its host (your computer, tablet, smartphone...). Then, every time-element is having its ternary equivalent calculated by calling the first function. Last, the color-property is pushed to all respective cells (waiting for your Einstein brain to try reading it ;-).
+```javascript
+  function refreshClock() {
+      /* get a reference to the table containing the digits                        */
+      var x = document.getElementById("timetable").getElementsByTagName("td");
+
+      /* get the current timestamp from the local machine                          */
+      var date = new Date;
+      var seconds = date.getSeconds();
+      var minutes = date.getMinutes();
+      var hour = date.getHours();
+
+      /* convert hours/minutes/seconds to their ternary representation             */
+      var ternaryHour = convertToTernaryColors(hour);
+      var ternaryMinutes = convertToTernaryColors(minutes);
+      var ternarySeconds = convertToTernaryColors(seconds);
+
+      /* update the coloured squares in the table                                  */
+      for (i = 0; i < 4; i++) {
+        x[i].style.backgroundColor = ternaryHour[i];
+        }
+      for (i = 0; i < 4; i++) {
+        x[i+4].style.backgroundColor = ternaryMinutes[i];
+        }
+      for (i = 0; i < 4; i++) {
+        x[i+8].style.backgroundColor = ternarySeconds[i];
+        }
+  }
+```
+
+### CSS stylesheet
+
+```css
+/* definitions to create a 400-pixel high container using full browser width      */
+.center
+    {
+    height: 400px;
+    position: relative;
+    }
+/* put the table in the middle of the container horizontally and vertically       */
+.center table
+    {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    }
+/* set the background of the webpage to whitesmoke                                */
+body
+    {
+    background-color: whitesmoke;
+    }
+/* set the table background to white, to show gridlines                           */
+table.clock
+    {
+    background-color: white;
+    }
+/* set the size of the square representing a digit
+   set the digit by default to whitesmoke, meaning value=0                        */
+td.trit
+    {
+    background-color: whitesmoke;
+    height: 100px;
+    width: 100px;
+    }
+```
+
+### HTML code
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ternary clock</title>                              
+        <link href="clock.css" rel="stylesheet" type="text/css">   
+                                                                       
+        <script type="text/javascript" src="clock.js"></script>    
+                                                                  
+    </head>
+    <body onload="window.setInterval(refreshClock, 1000)">        
+        <div class="center">                                      
+            <table class = "clock" id = "timetable">             
+              <tr>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+              </tr>
+              <tr>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+              </tr>
+              <tr>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+              </tr>
+            </table>
+        </div>
+    </body>
+</html>
 ```
 
 ## Contributors
