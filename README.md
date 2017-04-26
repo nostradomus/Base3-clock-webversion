@@ -2,7 +2,7 @@
 
 ## What
 
-At school, kids learn to count from 1 to 10 (probably because the number of fingers on your hands ;-). As such, in daily life, the decimal system is the most popular, and most intuitive to use. Computer scientists tend to prefer [binary](https://en.wikipedia.org/wiki/Binary_number) (0-1) or [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) (x0-xF) systems. All of them are just a way of counting quantity. 
+At school, kids learn to count from 1 to 10 (probably because of the number of fingers on your hands ;-). As such, in daily life, the decimal system is by far the most popular, and most intuitive to use. Computer scientists tend to prefer [binary](https://en.wikipedia.org/wiki/Binary_number) (0-1) or [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) (x0-xF) systems. All of them are just a way of representing quantity (or whatever info you want) in a non-ambiguous way. 
 
 In a [ternary or base-3 systems](https://en.wikipedia.org/wiki/Ternary_numeral_system), only 0,1 and 2 are used. Being way less common, reading figures like 12201211 might make your brain-processor to get hot. The clock in this repository shows time by colored squares which represent the three possible states in a ternary numeral system. 
 
@@ -39,7 +39,7 @@ line | description | values
 
 The numbers should be read from right to left.
 
-The right square is the least sigificant trit (yes trit, not bit).
+The right square is the least significant trit (yes trit, not bit).
 
 The left-most square is the most significant trit.
 
@@ -63,26 +63,31 @@ The ternary numbers for the clock will have maximum 4 digits (max 3 for the hour
  
 ### Sourcecode
 
+The first function converts a decimal value into an array of color-names. Each element represents one trit. The array is limited to 4 elements, as the highest value for this application is 59 (minutes or seconds). Element 0 of the array contains the most significant trit, element 3 the least significant. The trit value is obtained by dividing the decimal value by powers of 3, and translating the remainder to the respective html-color for the trit value : 
+ - 0 : `whitesmoke`
+ - 1 : `yellowgreen`
+ - 2 : `orangered`
+ 
 ```javascript
-      function convertToTernaryColors(decimal) { 
-        var ternaryColors = ["whitesmoke", "whitesmoke", "whitesmoke", "whitesmoke"];
-        var div;
-        var rem;
-        for (i = 0; i < 4; i++) {
-            div = Math.floor(decimal/Math.pow(3, 3-i));
-            rem = decimal % Math.pow(3, 3-i);
-            switch(div) {
-                case 1:
-                    ternaryColors[i] = "yellowgreen";
-                    break;
-                case 2:
-                    ternaryColors[i] = "orangered";
-                    break;
-              } 
-            decimal = rem;  
+  function convertToTernaryColors(decimal) {
+    var ternaryColors = ["whitesmoke", "whitesmoke", "whitesmoke", "whitesmoke"];
+    var div;
+    var rem;
+    for (i = 0; i < 4; i++) {
+        div = Math.floor(decimal/Math.pow(3, 3-i));
+        rem = decimal % Math.pow(3, 3-i);
+        switch(div) {
+            case 1:
+                ternaryColors[i] = "yellowgreen";
+                break;
+            case 2:
+                ternaryColors[i] = "orangered";
+                break;
           }
-        return ternaryColors
-      }
+        decimal = rem;
+      }
+    return ternaryColors
+  }
 ```
 
 ## Contributors
