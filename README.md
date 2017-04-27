@@ -167,9 +167,7 @@ td.trit
         <meta charset="UTF-8">
         <title>Ternary clock</title>                              
         <link href="clock.css" rel="stylesheet" type="text/css">   
-                                                                       
         <script type="text/javascript" src="clock.js"></script>    
-                                                                  
     </head>
     <body onload="window.setInterval(refreshClock, 1000)">        
         <div class="center">                                      
