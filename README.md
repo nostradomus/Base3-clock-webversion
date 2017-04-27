@@ -61,7 +61,7 @@ The ternary numbers for the clock will have maximum 4 digits (max 3 for the hour
  - `hours` : (000)ter - (222)ter => (0)dec - (26)dec
  - `mins/secs` : (0000)ter - (2222)ter => (0)dec - (80)dec
 
-###Javascript sourcecode
+### Javascript sourcecode
 
 The first function converts a decimal value into an array of color-names. Each element represents one trit. The array is limited to 4 elements, as the highest value for this application is 59 (minutes or seconds). Element 0 of the array contains the most significant trit, element 3 the least significant. The trit value is obtained by dividing the decimal value by powers of 3, and translating the remainder to the respective html-color for the trit value :
  - 0 : `whitesmoke`
@@ -119,7 +119,7 @@ The second function takes care of the cyclic (every second) update of the time i
   }
 ```
 
-###CSS stylesheet
+### CSS stylesheet
 
 The stylesheet contains three types of important information.
  - The easy one to start with are the colors. ``whitesmoke`` is the default, or zero color for the digits, which is also used for the general background of the webpage. ``white`` is only used to create 1-pixel wide gridlines around the digits (ie. the table).
@@ -163,7 +163,7 @@ td.trit
     }
 ```
 
-###HTML code
+### HTML code
 
 The HTML code which goes along with this project is pretty straightforward. The ``<head>`` part contains links to the above [javascript](###Javascript-sourcecode) and [CSS](###CSS-stylesheet) files where all the magic happens. The ``onload`` keyword in the ``<body>`` tag tells your browser to update the clock every second, by calling the ``refreshClock`` function in the [javascript file](###Javascript-sourcecode). Next, a ``div`` is set up as outer container to center the clock ``<table>``. All ``<td>`` cells start with the same properties. Their background color will be updated by the ``refreshClock`` function. Inside a table, cells can be addressed as an array. They are numbered from left to right, and from top to bottom. So, top-left is the first element of the array ``x[0]``, and bottom-right is the last element.
 
