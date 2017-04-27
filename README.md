@@ -12,6 +12,8 @@ Below you can find two static screenshots. In order to see a fully functional de
 ----------|----------
 ![Clock example](images/213250.png) | ![Clock example](images/212443.png)
 
+If you are more of the building type, you might also be interested in the hardware version of our clock, to be found in [this related repository](https://github.com/nostradomus/Base3-clock).
+
 ## Why
 
 Some might find the idea a little crazy, others will say its fun. I think it is an excellent tool to train the brain... and I am probably having a twisted mind :laughing:
@@ -41,9 +43,9 @@ line | description | values
 
 The numbers should be read from right to left.
 
-The right square is the least significant trit (yes trit, not bit).
+The rightmost square is the least significant trit (yes trit, not bit).
 
-The left-most square is the most significant trit.
+The leftmost square is the most significant trit.
 
 ### Maths
 
@@ -55,7 +57,7 @@ power   | 0                 | 1     | 2      | 3       | 4        | ... |
 decimal | 1                 | 3     | 9      | 27      | 81       | ... |
 range   | 0/1/2             | 0/3/6 | 0/9/18 | 0/27/54 | 0/81/162 | ... |
 
-So to convert a ternary number to the decimal system, you have to start with the most-right digit, multiply it with 3^0, multiply the next digit with 3^1, 3^2, and so on...
+So to convert a ternary number to the decimal system, you have to start with the rightmost digit, multiply it with 3^0, multiply the next digit with 3^1, 3^2, and so on...
 
 So for example (11021)ter = 1x3^0 + 2x3^1 + 0x3^2 + 1x3^3 + 1x3^4 =  (111)dec
 
