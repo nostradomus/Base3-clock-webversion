@@ -14,7 +14,7 @@ Below you can find two static screenshots. In order to see a fully functional de
 
 ## Why
 
-Some might find the idea a little crazy, others will say its fun. I think it is an excellent tool to train the brain... and I am probably a little crazy :laughing:
+Some might find the idea a little crazy, others will say its fun. I think it is an excellent tool to train the brain... and I am probably having a twisted mind :laughing:
 
 Anyhow, it was a good exercise to write some javascript, it's a challenge every time you want to know the time, and it was great fun after all.
 
