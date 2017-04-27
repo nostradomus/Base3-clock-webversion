@@ -165,6 +165,8 @@ td.trit
 
 ### HTML code
 
+The HTML code which goes along with this project is pretty straightforward. The ``<head>`` part contains links to the above [javascript](###-Javascript-sourcecode) and [CSS](###-CSS-stylesheet) files where all the magic happens. The ``onload`` keyword in the ``<body>`` tag tells your browser to update the clock every second, by calling the ``refreshClock`` function in the [javascript file](###-Javascript-sourcecode). Next, a ``div`` is set up as outer container to center the clock ``<table>``. All ``<td>`` cells start with the same properties. Their background color will be updated by the ``refreshClock`` function. Inside a table, cells can be addressed as an array. They are numbered from left to right, and from top to bottom. So, top-left is the first element of the array ``x[0]``, and bottom-right is the last element.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
