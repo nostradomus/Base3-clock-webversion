@@ -6,6 +6,8 @@ At school, kids learn to count from 1 to 10 (probably because of the number of f
 
 In a [ternary or base-3 systems](https://en.wikipedia.org/wiki/Ternary_numeral_system), only 0,1 and 2 are used. Being way less common, reading figures like 12201211 might make your brain-processor to get hot. The clock in this repository shows time by colored squares which represent the three possible states in a ternary numeral system.
 
+Below you can find two static screenshots. In order to see a fully functional demo, either open the clock.html file in the [source folder](source/), or click on [this link to our server](http://nostradomus.ddns.net/clock.html).
+
 `21:32:50`|`21:24:43`
 ----------|----------
 ![Clock example](images/213250.png) | ![Clock example](images/212443.png)
