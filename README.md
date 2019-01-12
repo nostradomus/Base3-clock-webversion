@@ -1,5 +1,5 @@
 # :clock10: Ternary clock with colorful read-out (web-version)
-
+![](https://img.shields.io/badge/project%20status-released-green.svg) ![](https://img.shields.io/badge/version-1.0.0.0-green.svg)
 ## What
 
 At school, kids learn to count from 1 to 10 (probably because of the number of fingers on your hands ;-). As such, in daily life, the decimal system is by far the most popular, and most intuitive to use. Computer scientists tend to prefer [binary](https://en.wikipedia.org/wiki/Binary_number) (0-1) or [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) (x0-xF) systems. All of them are just a way of representing quantity (or whatever info you want) in a non-ambiguous way.
